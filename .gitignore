@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+config.js
+dev.js
+authOptions.js
+public/bower_components/
+public/MaterialIcon/
+public/css/
