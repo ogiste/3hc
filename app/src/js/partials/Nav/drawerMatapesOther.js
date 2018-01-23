@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
+import List from 'material-ui/List';
 import { MenuItem } from 'material-ui/Menu';
 import Typography from 'material-ui/Typography';
 import TextField from 'material-ui/TextField';
@@ -13,8 +14,6 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import ChevronRightIcon from 'material-ui-icons/ChevronRight';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-import InboxIcon from 'material-ui-icons/MoveToInbox';
 
 const drawerWidth = 240;
 
@@ -108,36 +107,29 @@ const styles = theme => ({
 });
 
 class PersistentDrawer extends React.Component {
-  
+  state = {
+    open: false,
+    anchor: 'left',
+  };
 
-  constructor(props){
-    super(props);
-    this.state = {
-      open: false,
-      anchor: 'left',
-      drawer:null
-    };
-
-  }
-
-  handleDrawerOpen(){
+  handleDrawerOpen = () => {
     this.setState({ open: true });
-  }
+  };
 
-  handleDrawerClose(){
+  handleDrawerClose = () => {
     this.setState({ open: false });
-  }
-  handleChangeAnchor(event){
+  };
+
+  handleChangeAnchor = event => {
     this.setState({
       anchor: event.target.value,
     });
-  }
+  };
 
-  componentDidMount() {
-
+  render() {
     const { classes, theme } = this.props;
     const { anchor, open } = this.state;
-    
+
     const drawer = (
       <Drawer
         type="persistent"
@@ -154,33 +146,19 @@ class PersistentDrawer extends React.Component {
             </IconButton>
           </div>
           <Divider />
-          <List className={classes.list}>
-              <ListItem  button >
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText inset primary="Work"  />
-                </ListItem>
-              <ListItem  button >
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                  <ListItemText inset primary="Music"  />
-              </ListItem>
-          </List>
           <Divider />
         </div>
       </Drawer>
     );
 
-    this.setState( {
-      drawer: drawer });
-  }
+    let before = null;
+    let after = null;
 
-  render() {
-    const { classes, theme } = this.props;
-    const { anchor, open } = this.state;
-
+    if (anchor === 'left') {
+      before = drawer;
+    } else {
+      after = drawer;
+    }
 
     return (
       <div className={classes.root}>
@@ -216,7 +194,7 @@ class PersistentDrawer extends React.Component {
               </Typography>
             </Toolbar>
           </AppBar>
-          {this.state.drawer}
+          {before}
           <main
             className={classNames(classes.content, classes[`content-${anchor}`], {
               [classes.contentShift]: open,
@@ -225,6 +203,7 @@ class PersistentDrawer extends React.Component {
           >
             <Typography>{'You think water moves fast? You should see ice.'}</Typography>
           </main>
+          {after}
         </div>
       </div>
     );

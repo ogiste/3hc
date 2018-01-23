@@ -3,11 +3,24 @@
 import React from 'react';
 
 
-
+import Paper from 'material-ui/Paper';
+import Grid from 'material-ui/Grid';
 import AppBar from '../partials/Nav/appBar.js';
-
+import { withStyles } from 'material-ui/styles';
 import HomeMain from './homeMain.js';
+import theme from '../helpers/themeMui';
 
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    marginTop: 30,
+  },
+  paper: {
+    padding: 16,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+});
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -23,10 +36,10 @@ class HomeBody extends React.Component {
 render(){
 		return(
 		<div >
-		
-			<h1>This is where you put the rest of the HomeBody</h1>
-			
-		</div >
+		      <Grid container spacing={24}>
+			        <h1> HIP HOP HEAVY CONGLOMERATE.</h1>
+		      </Grid>
+	    </div>
 	   );
    }
 

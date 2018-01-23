@@ -1,14 +1,7 @@
 import React from 'react';
-
-import  'typeface-roboto';
-import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme'; 
-import Subheader from 'material-ui/Subheader';
+import Menu, { MenuItem } from 'material-ui/Menu';
+import MoreVertIcon from 'material-ui-icons/MoreVert';
 
 const options = [
   'None',
@@ -29,46 +22,62 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 
-class LongMenu extends React.Component { 
-
-
-
-
+class LongMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      anchorEl: null,
-    	open: false,
+      anchorEl: null
     };
-
-	 this.handleClick = event => {
-	    this.setState({ open: true, anchorEl: event.currentTarget });
-	 };
-
-	 this.handleRequestClose = () => { 
-	    this.setState({ open: false });
-	 };
-
-
   }
-  
-  render() {
-    return (
-     		 <div>
-		        <IconMenu 
-				    iconButtonElement={<IconButton><MoreVertIcon/></IconButton>}
-				    anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-				    targetOrigin={{horizontal: 'left', vertical: 'top'}}
-				    maxHeight={272}
-				  >
-		          {options.map(option => (
-		            <MenuItem key={option} selected={option === 'Callisto'} >
-		              {option}
-		            </MenuItem>  
-		          ))}
-		        </IconMenu>
 
-      		</div>
+  handleClick (event){
+    this.setState({ anchorEl: event.currentTarget });
+  }
+
+  handleClose(){
+    this.setState({ anchorEl: null });
+  }
+
+  render() {
+    const { anchorEl } = this.state;
+
+    return (
+      <div>
+        <IconButton
+          aria-label="More"
+          aria-owns={anchorEl ? 'long-menu' : null}
+          aria-haspopup="true"
+          onClick={this.handleClick}
+        >
+          <MoreVertIcon />
+        </IconButton>
+        <Menu
+          id="long-menu"
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+          transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+          open={Boolean(anchorEl)}
+          onClose={this.handleClose}
+          PaperProps={{
+            style: {
+              maxHeight: ITEM_HEIGHT * 4.5,
+              width: 200,
+            },
+          }}
+        >
+          {options.map(option => (
+            <MenuItem key={option} selected={option === 'Pyxis'} onClick={this.handleClose}>
+              {option}
+            </MenuItem>
+          ))}
+        </Menu>
+      </div>
     );
   }
 }

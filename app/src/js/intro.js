@@ -4,15 +4,15 @@ import profileStore from './profile/matapesStore.js';
 import MusicMain from './music/musicMain.js';
 import HomeMain from './home/homeMain.js';
 import "../../../public/css/style.css";
-
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { MuiThemeProvider } from 'material-ui';
 import {BrowserRouter} from 'react-router-dom';
+import theme from './helpers/themeMui.js';
  
 console.log("React JS. Tell them I'm coming!");
 
 ReactDOM.render(
 
-	<MuiThemeProvider >
+	<MuiThemeProvider theme={theme} >
 		<BrowserRouter >
 			<HomeMain/>
 	    </BrowserRouter>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import FlatButton from 'material-ui/Button';
 
 function MusicCardExpandable(){ 
   return (
@@ -12,7 +12,7 @@ function MusicCardExpandable(){
         showExpandableButton={true}
       />
       <CardActions>
-        <FlatButton label="Download Tracks" />
+        <FlatButton color="secondary" label="Download Tracks" />
         <FlatButton label="View Artist" />
       </CardActions>
       <CardText expandable={true}>

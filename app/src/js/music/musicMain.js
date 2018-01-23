@@ -4,7 +4,7 @@
 
 
 import React from 'react';
-import Subheader from 'material-ui/Subheader';
+import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 import MusicCard from './musicCard.js';
 
@@ -20,7 +20,7 @@ export default class MusicMain extends React.Component {
   render() {
     return (
       <section className="music-main-section">
-      	<Subheader ><h2>Music</h2></Subheader>
+      	<Typography type="subheading" ><h2>Music</h2></Typography>
           <Divider />
         <div>
         <MusicCard/>

@@ -1,11 +1,9 @@
 import React from 'react';
 import Clock from './clock.js';
-
 import TextField from 'material-ui/TextField';
-import Subheader from 'material-ui/Subheader';
 import isInt from '../helpers/validateType';
-
-import RaisedButton from 'material-ui/RaisedButton';
+import RaisedButton from 'material-ui/Button';
+import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 
 
@@ -37,7 +35,7 @@ class CountdownTimer extends React.Component {
 	render(){
 		return(
 			<div className='counter-div'>
-		         <Subheader> <h1> Countdown to {this.state.deadline}</h1></Subheader>
+		         <Typography type="subheading"> <h1> Countdown to {this.state.deadline}</h1></Typography>
 		         <Divider/>
 		          <Clock deadline={this.state.deadline} />
 		          <div>
@@ -48,7 +46,7 @@ class CountdownTimer extends React.Component {
 				      onChange={event=>this.setState({newDeadline: event.target.value})}
 				      />
 				      <br/>
-			          <RaisedButton label="Submit" secondary={true} 
+			          <RaisedButton type="raised" label="Submit" secondary={true} 
 			          	onClick={()=>this.setDeadline()}
 			          />
 		          </div>

@@ -15,12 +15,12 @@ class AppBarIcon extends React.Component {
 render(){
 		return(
 			<div>
-				<AppBar
-		          title="3HC"
-		          iconElementLeft={ <DrawerMatapes /> }
-		          iconElementRight={ <LongMenu /> }
-		        />
-		        
+				<AppBar static title="3HC">
+			        <Toolbar>
+				        <DrawerMatapes />
+				        <LongMenu />
+			        </Toolbar>
+		        </AppBar>
 	         </div>
 	   );
    }
