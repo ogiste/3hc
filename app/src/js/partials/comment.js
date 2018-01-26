@@ -1,6 +1,3 @@
-
-
-
 function Comment(props) {
   return (
     <div className="Comment">

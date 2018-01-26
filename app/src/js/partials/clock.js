@@ -1,7 +1,7 @@
 //clock.jsx
 import React from 'react';
 import isInt from '../helpers/validateType';
-import {List, ListItem} from 'material-ui/List';
+import {List, ListItem,ListItemText} from 'material-ui/List';
 
 class Clock extends React.Component {
 
@@ -89,12 +89,20 @@ componentWillReceiveProps(nextProps) {
   render() {
     return (
       <div>
-  		<List>
-  			<ListItem primaryText={ this.state.days +' Days '} />
-  			<ListItem primaryText={ this.state.hours +' Hours ' } />
-  			<ListItem primaryText={ this.state.minutes +' Minutes '} />
-  			<ListItem primaryText={ this.state.seconds + ' Seconds '} />
-  		</List>
+      <ListItem >
+          <ListItemText primary={ this.state.days +' Days '} />
+        </ListItem>
+        <div  > 
+          <ListItem>
+            <ListItemText primary={ this.state.hours +' Hours ' }  />
+          </ListItem>
+        </div>
+        <ListItem >
+          <ListItemText primary={ this.state.minutes +' Minutes '}   />
+        </ListItem>
+        <ListItem >
+          <ListItemText primary={ this.state.seconds + ' Seconds '}  />
+        </ListItem>
 	  </div>
     );
   }

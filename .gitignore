@@ -6,3 +6,5 @@ authOptions.js
 public/bower_components/
 public/MaterialIcon/
 public/css/
+public/dist/
+public/images

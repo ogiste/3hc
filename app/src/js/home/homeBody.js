@@ -1,15 +1,14 @@
 //home body
 
 import React from 'react';
-
-
 import Paper from 'material-ui/Paper';
-import Grid from 'material-ui/Grid';
 import AppBar from '../partials/Nav/appBar.js';
 import { withStyles } from 'material-ui/styles';
 import HomeMain from './homeMain.js';
 import theme from '../helpers/themeMui';
-
+import Grid from 'material-ui/Grid';
+import Typography from 'material-ui/Typography';
+import HomeMediaCard from './homeMediaContentCard';
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -35,11 +34,27 @@ class HomeBody extends React.Component {
 
 render(){
 		return(
-		<div >
-		      <Grid container spacing={24}>
-			        <h1> HIP HOP HEAVY CONGLOMERATE.</h1>
-		      </Grid>
-	    </div>
+				    <Grid container spacing={24}>
+				       <Grid item  className="homeBannerMain" xs={12} >
+				       	<div className="homeBannerContainer" style={ {position:'relative'} }>
+					       	<div className="homeBanner"></div>
+					       	<div className="homeHeadlineContainer">
+					       		<div className="homeHeadlineTitle">
+							        <Typography color="secondary" type="display3" align="center">
+							         	<b>HIPHOP HEAVY CONGLOMERATE.</b>
+							        </Typography>
+						        </div>
+					        </div>
+				       	</div>
+				       	
+				       </Grid>
+				       <Grid item xs={12}>
+			      		<div className="homeBodyCardContainer" style={ {position:'relative'} }>
+				       		<HomeMediaCard/>
+				       	</div>
+				       </Grid>
+				    </Grid> 
+		      
 	   );
    }
 

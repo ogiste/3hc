@@ -1,6 +1,8 @@
 import React from 'react';
 import CountdownTimer from '../partials/countdown';
 
+import Grid from 'material-ui/Grid';
+
 /**
  * A simple example of `AppBar` with an icon on the right.
  * By default, the left icon is a navigation-menu.
@@ -14,9 +16,9 @@ class TimerMain extends React.Component {
 
 render(){
 		return(
-			<section>
+			<Grid container justify='center' >
 				<CountdownTimer/>
-			</section>
+			</Grid>
 	   );
    }
 

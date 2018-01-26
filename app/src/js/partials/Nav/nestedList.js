@@ -4,17 +4,18 @@ import { withStyles } from 'material-ui/styles';
 import ListSubheader from 'material-ui/List/ListSubheader';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import Collapse from 'material-ui/transitions/Collapse';
-import InboxIcon from 'material-ui-icons/MoveToInbox';
-import DraftsIcon from 'material-ui-icons/Drafts';
-import SendIcon from 'material-ui-icons/Send';
+import MusicLibraryIcon from 'material-ui-icons/LibraryMusic';
+import TimerIcon from 'material-ui-icons/Timer';
+import HomeIcon from 'material-ui-icons/Home';
 import ExpandLess from 'material-ui-icons/ExpandLess';
 import ExpandMore from 'material-ui-icons/ExpandMore';
-import StarBorder from 'material-ui-icons/StarBorder';
-
+import AudioTrackIcon from 'material-ui-icons/Audiotrack';
+import FileDownloadIcon from 'material-ui-icons/FileDownload';
+import PlayCircleFilledIcon from 'material-ui-icons/PlayCircleFilled';
 import {Link} from 'react-router-dom';
 
 const styles = theme => ({
-  root: {
+  rootList: {
     width: '100%',
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
@@ -35,7 +36,7 @@ class NestedList extends React.Component {
 
   
 
-  handleClick(){
+  handleClick = ()=>{
     this.setState({ open: !this.state.open });
   }
 
@@ -43,46 +44,49 @@ class NestedList extends React.Component {
     const { classes } = this.props;
 
     return (
-      <List className={classes.root} subheader={<ListSubheader>Nested List Items</ListSubheader>}>
-        <ListItem button>
+      <List className={classes.rootList} subheader={<ListSubheader>HipHopHeavy Cong.</ListSubheader>}>
+        <ListItem component={Link}
+            to="/"  button>
           <ListItemIcon>
-            <SendIcon />
+            <HomeIcon />
           </ListItemIcon>
           <ListItemText inset primary="Home"  />
         </ListItem>
-        <div> 
-        <Link to="/countdown"/>
-          <ListItem  button>
+        <div  > 
+          <ListItem 
+            component={Link}
+            to="/countdown" button>
             <ListItemIcon>
-              <DraftsIcon />
+              <TimerIcon />
             </ListItemIcon>
             <ListItemText inset primary="Countdown"  />
           </ListItem>
         </div>
-        <ListItem  button onClick={this.handleClick}>
+        <ListItem  component={Link}
+            to="/music" button onClick={this.handleClick}>
           <ListItemIcon>
-            <InboxIcon />
+            <MusicLibraryIcon />
           </ListItemIcon>
           <ListItemText inset primary="Music"  />
           {this.state.open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse component="li" in={this.state.open} timeout="auto" unmountOnExit>
           <List disablePadding>
-            <ListItem button className={classes.nested}>
+            <ListItem  button className={classes.nested}>
               <ListItemIcon>
-                <StarBorder />
+                <AudioTrackIcon />
               </ListItemIcon>
               <ListItemText inset primary="New Releases" />
             </ListItem>
             <ListItem button className={classes.nested}>
               <ListItemIcon>
-                <StarBorder />
+                <FileDownloadIcon />
               </ListItemIcon>
               <ListItemText inset primary="Downloads" />
             </ListItem>
             <ListItem button className={classes.nested}>
               <ListItemIcon>
-                <StarBorder />
+                <PlayCircleFilledIcon />
               </ListItemIcon>
               <ListItemText inset primary="Stream" />
             </ListItem>

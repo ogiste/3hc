@@ -26,7 +26,7 @@ var getNewFlauntValue= function(done){
 	if (done) {
 		var sprinkles = done(null,"Yah");
 		console.log(sprinkles);
-		return console.log("Bitch...");
+		return console.log("Wah...");
 	};
 };
 

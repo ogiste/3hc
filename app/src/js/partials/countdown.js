@@ -5,7 +5,17 @@ import isInt from '../helpers/validateType';
 import RaisedButton from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
+import Grid from 'material-ui/Grid';
+import Paper from 'material-ui/Paper';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
 
+const styles = theme => ({
+  paper: {
+    padding: 16,
+    textAlign: 'center',
+  },
+});
 
 class CountdownTimer extends React.Component {
 
@@ -33,26 +43,36 @@ class CountdownTimer extends React.Component {
   }
 
 	render(){
+		const { classes } = this.props;
+
 		return(
-			<div className='counter-div'>
-		         <Typography type="subheading"> <h1> Countdown to {this.state.deadline}</h1></Typography>
-		         <Divider/>
-		          <Clock deadline={this.state.deadline} />
-		          <div>
-			          <TextField
-				      hintText="'New Date'"
-				      floatingLabelText="Set New Date"
-				      floatingLabelFixed={true}
-				      onChange={event=>this.setState({newDeadline: event.target.value})}
-				      />
-				      <br/>
-			          <RaisedButton type="raised" label="Submit" secondary={true} 
-			          	onClick={()=>this.setDeadline()}
-			          />
-		          </div>
-			</div>);
+			<Grid container  alignItems="center" >
+				<Grid item xs={12}>
+		          		<Paper className={classes.paper}>
+		          	         <Typography> 
+		          	         	 Countdown to {this.state.deadline}
+		          	         </Typography>
+		          	         <Divider/>
+		          	          <Clock deadline={this.state.deadline} />
+		          	          <div>
+		          			      <TextField
+		          			          id="CountdownDate"
+		          			          label="Set Countdown Date"
+		          			          placeholder="Set New Date"
+		          			          margin="normal"
+		          			          onChange={event=>this.setState({newDeadline: event.target.value})}
+		          			        />
+		          			      <br/>
+		          		          <RaisedButton raised color="secondary" 
+		          		          	onClick={()=>this.setDeadline()}>
+		          			        Submit
+		          			      </RaisedButton>
+		          	          </div>
+		                    </Paper>
+		        </Grid>
+			</Grid>);
 	}
 
 }
 
-export default CountdownTimer;
+export default withStyles(styles)(CountdownTimer);
