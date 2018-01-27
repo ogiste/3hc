@@ -1,10 +1,11 @@
 import React from 'react';
 import HomeHeader from './homeHeader';
-import HomeBody from './homeBody';
+import HomeBodyGrid from './homeBodyGrid';
 import MusicMain from '../music/musicMain.js';
 import TimerMain from '../timer/timerMain';
 import {Route,Switch} from 'react-router-dom';
 import Grid from 'material-ui/Grid';
+import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -21,15 +22,15 @@ render(){
 		return(
 			<div>
 				<HomeHeader/>
-				<div style={{ padding: 26 }} >
-					<Grid container spacing={24}>
+				<div style={{ padding: 26 ,marginTop:60}} >
+					<InlineGrid>
 						<Switch>
-							<Route exact path="/" component={HomeBody} />
+							<Route exact path="/" component={HomeBodyGrid} />
 							<Route exact path="/music" component={MusicMain}/>
 							<Route exact path="/countdown" component={TimerMain}/>
 						</Switch>
 
-					</Grid>
+					</InlineGrid>
 				</div>
 				
 			</div>

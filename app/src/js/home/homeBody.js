@@ -8,7 +8,9 @@ import HomeMain from './homeMain.js';
 import theme from '../helpers/themeMui';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
+import Divider from 'material-ui/Divider';
 import HomeMediaCard from './homeMediaContentCard';
+import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -35,6 +37,7 @@ class HomeBody extends React.Component {
 render(){
 		return(
 				    <Grid container spacing={24}>
+				    	<div className="pos-rel">
 				       <Grid item  className="homeBannerMain" xs={12} >
 				       	<div className="homeBannerContainer" style={ {position:'relative'} }>
 					       	<div className="homeBanner"></div>
@@ -48,11 +51,23 @@ render(){
 				       	</div>
 				       	
 				       </Grid>
-				       <Grid item xs={12}>
-			      		<div className="homeBodyCardContainer" style={ {position:'relative'} }>
-				       		<HomeMediaCard/>
-				       	</div>
+				       <Grid item xs >
+
 				       </Grid>
+				       <InlineGrid >
+					       	<InlineRow >
+					       		<div>
+							       <Typography type="headline" >
+								      				The Latest
+								   </Typography>
+						      		<Divider/>
+						      	</div>
+					       	</InlineRow>
+					      		<InlineRow >
+							       		<HomeMediaCard/>
+						       	</InlineRow>
+					    </InlineGrid>
+					    </div>
 				    </Grid> 
 		      
 	   );

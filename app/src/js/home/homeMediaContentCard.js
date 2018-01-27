@@ -4,10 +4,12 @@ import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import Grid from 'material-ui/Grid';
+import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
 
 const styles = {
   card: {
-    maxWidth: 500,
+    maxWidth: 345
   },
   media: {
     height: 200,
@@ -17,7 +19,7 @@ const styles = {
 function SimpleMediaCard(props) {
   const { classes } = props;
   return (
-    <div style={ {position:'relative'} }>
+    <InlineCell className="homeBodyCardContainer" is="4 tablet-4 phone-4">
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
@@ -42,7 +44,7 @@ function SimpleMediaCard(props) {
           </Button>
         </CardActions>
       </Card>
-    </div>
+    </InlineCell>
   );
 }
 
