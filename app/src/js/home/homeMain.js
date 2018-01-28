@@ -6,6 +6,7 @@ import TimerMain from '../timer/timerMain';
 import {Route,Switch} from 'react-router-dom';
 import Grid from 'material-ui/Grid';
 import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
+import HomeFooter from './homeFooter';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -32,7 +33,7 @@ render(){
 
 					</InlineGrid>
 				</div>
-				
+				<HomeFooter/>
 			</div>
 	   );
    }
