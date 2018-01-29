@@ -23,7 +23,7 @@ render(){
 		return(
 			<div>
 				<HomeHeader/>
-				<div style={{ padding: 26 ,marginTop:60}} >
+				<div style={{ minHeight:600 ,padding: 26 ,marginTop:60}} >
 					<InlineGrid>
 						<Switch>
 							<Route exact path="/" component={HomeBodyGrid} />

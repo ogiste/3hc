@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
+import PlayIcon from 'material-ui-icons/PlayArrow';
+import ShareIcon from 'material-ui-icons/Share';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
@@ -38,10 +40,13 @@ function SimpleMediaCard(props) {
         <CardActions>
           <Button dense color="secondary">
             Share
+            <ShareIcon/>
           </Button>
           <Button dense color="primary">
-            Listen
+                  Play
+                  <PlayIcon/>
           </Button>
+          
         </CardActions>
       </Card>
     </InlineCell>

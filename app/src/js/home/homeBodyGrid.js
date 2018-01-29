@@ -48,7 +48,7 @@ render(){
 									       	<div className="homeHeadlineContainer">
 									       	<div className="homeBannerBg"></div>
 									       		<div className="homeHeadlineTitle">
-											        <Typography color="secondary" type="display3" align="center">
+											        <Typography className="homeBannerTitleText" type="display3" align="center">
 											         	<b>HIPHOP HEAVY CONGLOMERATE.</b>
 											        </Typography>
 										        </div>
