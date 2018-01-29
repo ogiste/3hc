@@ -1,6 +1,7 @@
 import React from 'react';
 import theme from '../helpers/themeMui';
 import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
+import FooterChip from '../partials/homeFooterChips';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -18,33 +19,35 @@ class HomeFooter extends React.Component {
 
 render(){
 		return(
-		 	<div className="homeFooter">
+		 	<footer className="homeFooter">
 		 	<InlineGrid>
-		 		<InlineRow >
-		 			<InlineCell is="4 tablet-4 phone-4">
+		 	<div className="footerRowWidth">
+		 		<InlineRow  >
+		 			<InlineCell is="3 tablet-3 phone-3">
 		 				<ul>
-		 					<li>Home</li>
-		 					<li>Contact Us</li>
-		 					<li>About Us</li>
+		 					<FooterChip label="Home" /> 
+		 					<FooterChip label="Contact Us" /> 
+		 					<FooterChip label="About Us" />
 		 				</ul>
 		 			</InlineCell>
-		 			<InlineCell is="4 tablet-4 phone-4">
+		 			<InlineCell is="3 tablet-3 phone-3">
 		 				<ul>
-		 					<li>Music</li>
-		 					<li>Downloads</li>
-		 					<li>New Releases</li>
+		 					 <FooterChip label="Music" slash="music"/> 
+		 					<FooterChip label="Downloads" slash="music"/> 
+		 					<FooterChip label="New Releases" slash="countdown"/> 
 		 				</ul>
 		 			</InlineCell>
-		 			<InlineCell is="4 tablet-4 phone-4">
+		 			<InlineCell is="3 tablet-3 phone-3">
 		 				<ul>
-		 					<li>Blog</li>
-		 					<li>Shows</li>
-		 					<li>Bookings</li>
+		 					<FooterChip label="Blog" /> 
+		 					<FooterChip label="Events" /> 
+		 					<FooterChip label="Bookings" /> 
 		 				</ul>
 		 			</InlineCell>
 		 		</InlineRow>
-		 	</InlineGrid>
 		 	</div>
+		 	</InlineGrid>
+		 	</footer>
 	   );
    }
 
