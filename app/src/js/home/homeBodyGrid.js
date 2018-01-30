@@ -9,8 +9,8 @@ import theme from '../helpers/themeMui';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
-import HomeMediaCard from './homeMediaContentCard';
-import HomeArtistTile from './homeArtistGridItem';
+import HomeMusicFeature from './homeMusicCards';
+import HomeArtistFeature from './homeArtistTileRow';
 import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
 const styles = theme => ({
   root: {
@@ -66,20 +66,22 @@ render(){
 										   </Typography>
 								      		<Divider/>
 								      	</div>
-							       	</InlineRow>
-							     <InlineRow className="pos-rel">
-									<HomeMediaCard/>
-									<HomeMediaCard/>
-									<HomeMediaCard/>
-								</InlineRow>
+							    </InlineRow>
+							     <HomeMusicFeature/>
 								</div>
 							</InlineGrid>
 							<InlineGrid>
-								<InlineRow className="artistTileContainer">
-									<HomeArtistTile/>
-									<HomeArtistTile/>
-									<HomeArtistTile/>
-								</InlineRow>
+								<div style={{padding:5}}>
+									<InlineRow>
+										<Typography type="headline" >
+										The Squad
+										</Typography>
+										
+									</InlineRow>
+									<Divider/>
+									<HomeArtistFeature/>
+								</div>
+								
 							</InlineGrid>
 						</div>
 					</InlineGrid> 
