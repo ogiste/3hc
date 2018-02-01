@@ -11,6 +11,7 @@ import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 import HomeMusicFeature from './homeMusicCards';
 import HomeArtistFeature from './homeArtistTileRow';
+import HomeMessageRow from './homeSubscribeRow';
 import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
 const styles = theme => ({
   root: {
@@ -83,6 +84,20 @@ render(){
 								</div>
 								
 							</InlineGrid>
+							<InlineGrid>
+								<div style={{padding:5}}>
+									<InlineRow>
+										<Typography type="headline" >
+										Let's Connect
+										</Typography>
+										
+									</InlineRow>
+									<Divider/>
+									<HomeMessageRow/>
+								</div>
+								
+							</InlineGrid>
+
 						</div>
 					</InlineGrid> 
 				</div>

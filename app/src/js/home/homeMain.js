@@ -30,9 +30,11 @@ render(){
 							<Route exact path="/music" component={MusicMain}/>
 							<Route exact path="/countdown" component={TimerMain}/>
 						</Switch>
-
+						
 					</InlineGrid>
+					
 				</div>
+
 				<HomeFooter/>
 			</div>
 	   );
