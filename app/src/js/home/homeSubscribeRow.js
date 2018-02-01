@@ -32,12 +32,15 @@ render(){
 									          label="Title"
 									          placeholder="About..."
 									          margin="normal"
+
+
 									        /><br/>
 									        <TextField
 									          id="email"
 									          label="Drop your email"
-									          placeholder="support@rt.com"
+									          placeholder="supp@rtmusic.com"
 									          margin="normal"
+									          fullWidth
 									        />
 									        <TextField
 									          id="message_textarea"
