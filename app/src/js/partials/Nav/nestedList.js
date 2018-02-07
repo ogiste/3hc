@@ -14,11 +14,14 @@ import FileDownloadIcon from 'material-ui-icons/FileDownload';
 import PlayCircleFilledIcon from 'material-ui-icons/PlayCircleFilled';
 import {Link} from 'react-router-dom';
 
+// backgroundColor: theme.palette.background.paper,
 const styles = theme => ({
   rootList: {
     width: '100%',
+
     maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
+    
+    
   },
   nested: {
     paddingLeft: theme.spacing.unit * 4,

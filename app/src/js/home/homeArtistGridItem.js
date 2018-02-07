@@ -9,6 +9,8 @@ import PersonPinIcon from 'material-ui-icons/PersonPin';
 import AudioTrackIcon from 'material-ui-icons/Audiotrack';
 import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
 
+
+//color: theme.palette.primary.contrastText,
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -22,8 +24,14 @@ const styles = theme => ({
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
   },
-  title: {
-    color: theme.palette.primary.contrastText,
+  titlePerson: {
+    color:"#f44336"
+  },
+  titleMusic: {
+    color:theme.palette.primary.contrastText
+  },
+  titleLabel:{
+    color:theme.palette.primary.contrastText,
   },
   titleBar: {
     background:
@@ -60,15 +68,15 @@ function SingleLineGridItem(props) {
               title="KiliHippie Profile"
               classes={{
                 root: classes.titleBar,
-                title: classes.title,
+                title: classes.titleLabel,
               }}
               actionIcon={
                 <div>
                   <IconButton >
-                    <AudioTrackIcon className={classes.title} />
+                    <AudioTrackIcon className={classes.titleMusic} />
                   </IconButton>
                   <IconButton >
-                     <PersonPinIcon className={classes.title}/>
+                     <PersonPinIcon className={classes.titlePerson}/>
                   </IconButton>
                 </div>
                
