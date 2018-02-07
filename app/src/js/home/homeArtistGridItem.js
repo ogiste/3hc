@@ -5,6 +5,8 @@ import { withStyles } from 'material-ui/styles';
 import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import StarBorderIcon from 'material-ui-icons/StarBorder';
+import PersonPinIcon from 'material-ui-icons/PersonPin';
+import AudioTrackIcon from 'material-ui-icons/Audiotrack';
 import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-inline-grid';
 
 const styles = theme => ({
@@ -25,8 +27,8 @@ const styles = theme => ({
   },
   titleBar: {
     background:
-      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-  },
+      '#000a12',
+  }
 });
 
 /**
@@ -61,9 +63,15 @@ function SingleLineGridItem(props) {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
+                <div>
+                  <IconButton >
+                    <AudioTrackIcon className={classes.title} />
+                  </IconButton>
+                  <IconButton >
+                     <PersonPinIcon className={classes.title}/>
+                  </IconButton>
+                </div>
+               
               }
             />
             </div>

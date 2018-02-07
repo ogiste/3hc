@@ -13,6 +13,8 @@ const styles = {
   card: {
     maxWidth: 345
   },
+  det_card:{color:'white'},
+  bg_content:{backgroundColor:'#000a12'},
   media: {
     height: 200,
   },
@@ -28,16 +30,16 @@ function SimpleMediaCard(props) {
           image="/images/cards/KeepUp.jpg"
           title="A Cypher Jam Called Keep Up"
         />
-        <CardContent>
-          <Typography type="headline" component="h2">
+        <CardContent className={classes.bg_content}>
+          <Typography className={classes.det_card} type="headline" component="h2">
             A Cyper Jam Called 'Keep Up' 
           </Typography>
-          <Typography component="p">
+          <Typography className={classes.det_card} component="p">
             Featuring the lyrical bombardment of veterans <b>Phaze</b> & <b>Truff Will</b> and kicking off with freshman <b>OGi</b>.
             This is for the lyrically apt experiencing some of that golden era nostalgia.
           </Typography> 
         </CardContent>
-        <CardActions>
+        <CardActions className={classes.bg_content}>
           <Button dense color="secondary">
             Share
             <ShareIcon/>

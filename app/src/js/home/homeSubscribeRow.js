@@ -38,7 +38,7 @@ render(){
 									        <TextField
 									          id="email"
 									          label="Drop your email"
-									          placeholder="supp@rtmusic.com"
+									          placeholder="supp@rtmusic.co.ke"
 									          margin="normal"
 									          fullWidth
 									        />
