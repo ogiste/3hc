@@ -1,0 +1,177 @@
+body {
+	background-color:#fff
+}
+.counter-div{
+	text-align: center;
+}
+.music-main-section{
+	margin-left: 10%;
+	margin-right:10%;
+
+}
+a.active {
+    color: #000000 !important;
+    text-decoration: underline !important;
+    background-color: red;
+}
+.homeBannerBg{
+	top: 0;
+	left:0;
+	position: absolute ;
+    width: 100%;
+    height: 100% ;
+    background-size: cover ;
+    background-image: url(/images/home/darksetup.jpg) ;
+    background-repeat: no-repeat ;
+    background-position: center ;
+    min-height: 250px ;
+}
+.homeMessBoxBg{
+	background-image: url(/images/home/headphones.jpg);
+	position: absolute;
+    width: 100%;
+    height: 100% ;
+    background-size: cover ;
+    background-repeat: no-repeat ;
+    background-position: center ;
+    min-height: 250px ;
+
+}
+.homeMessInnerBg{
+	background-color: #fbfbfbe0;
+	position: absolute;
+	width: 79%;
+    height: 90%;
+	background-image: none;
+
+}
+.homeMessInner{
+	position: relative;
+	margin: 30px;
+	padding: 16px;
+
+}
+.homeBannerContainer{
+	width: 100%;
+	position: relative !important;
+	
+
+}
+.homeHeadlineContainer,.homeMessageBox{
+	position: relative;
+	z-index: 1;
+	min-height: 250px !important;
+}
+.homeMessageContainer{
+	position: relative;
+
+}
+.homeBar{
+	z-index: 1150;
+}
+.homeHeadlineTitle{ /* requires media query opt */
+	position: relative;
+	padding-top: 165px;
+	min-height: 250px !important;
+}
+.homeBannerMain{
+	margin-bottom: 20px !important;
+	min-height: 250px !important;
+}
+
+.homeBodyCardContainer{
+ 	margin-top: 10px;
+}
+.pos-rel,.homeBodyCardContainer{
+	position:relative !important; 
+}
+.artistTileContainer{
+	position:relative !important;
+	list-style: none !important;
+
+}
+.artistTileContainer>li{
+	
+}
+.cardContentTitleCont{
+	width: 100% !important;
+}
+.artistTileImage{
+	position:relative !important;
+	max-height:100%;
+	width: 100%;
+	
+}
+.artistTileDiv{
+	max-height:400px !important;
+}
+.homeFooter{
+    margin-top: 50px;
+    padding: 16px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: #000a12;
+}
+.footerRow{
+	position: relative !important;
+	width: 100%
+
+}
+.footerRowWidth{
+	width:100% !important;
+	padding: 20px
+}
+.chipFooterDiv{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;
+	padding: 3px;
+}
+.chipFooterDiv:active,.chipFooterDiv:focus {
+	/* style */
+	background-color: black;
+	color: white;
+	border-radius: .5px;
+	border-color: white;
+	border-style: solid;
+
+}
+
+.homeMessBoxFormContainer{
+	padding: 16px;
+	margin-top: 15px;
+
+}
+.homeMessBoxForm{
+	padding:20px;
+    margin: 60px;
+    margin-right: 250px;
+}
+
+.homeBannerTitleText{
+	color:rgb(253, 253, 252) !important;
+}
+
+ #matapesRoot {
+		background-image: url(/images/home/3HC_BG.jpg);
+	    background-size: cover ;
+	    background-repeat: no-repeat ;
+	    background-position: center ;
+	} 
+
+
+
+/* Animations */
+@-webkit-keyframes pulse {to {box-shadow: 0 0 4px 6px rgba(75, 160, 75,0.18);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 4px 6px rgba(75, 160, 75,0.18);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 4px 6px rgba(275, 160, 75,0.18);}}
+@keyframes pulse {to {box-shadow: 0 0 4px 6px rgba(75, 160, 75,0.18);}}
+
+
+
+@-webkit-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
+@-moz-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
+@-ms-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
+@keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
+
