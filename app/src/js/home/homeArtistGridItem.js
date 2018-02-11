@@ -11,6 +11,8 @@ import { Grid as InlineGrid, Row as InlineRow, Cell as InlineCell } from 'react-
 
 
 //color: theme.palette.primary.contrastText,
+// background:'#000a12',
+//color:"#f44336"
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -25,7 +27,7 @@ const styles = theme => ({
     transform: 'translateZ(0)',
   },
   titlePerson: {
-    color:"#f44336"
+    color:theme.palette.primary.contrastText
   },
   titleMusic: {
     color:theme.palette.primary.contrastText
@@ -35,7 +37,8 @@ const styles = theme => ({
   },
   titleBar: {
     background:
-      '#000a12',
+      '#ba000d',
+      
   }
 });
 
