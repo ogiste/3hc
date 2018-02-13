@@ -8,6 +8,7 @@ import SkipPreviousIcon from 'material-ui-icons/SkipPrevious';
 import PlayArrowIcon from 'material-ui-icons/PlayArrow';
 import SkipNextIcon from 'material-ui-icons/SkipNext';
 import Grid from 'material-ui/Grid';
+import {  Cell as InlineCell } from 'react-inline-grid';
 
 const styles = theme => ({
   card: {
@@ -40,7 +41,8 @@ function MediaControlCard(props) {
   const { classes, theme } = props;
 
   return (
-    <Grid item xs={4}>
+    <InlineCell className="musicSingleCardCell" is='4 tablet-4 phone-4'>
+      <Grid item>
       <Card className={classes.card}>
         <div className={classes.details}>
           <CardContent className={classes.content}>
@@ -67,7 +69,8 @@ function MediaControlCard(props) {
           title="Marlo Stanfield cover art"
         />
       </Card>
-    </Grid>
+      </Grid>
+    </InlineCell>
   );
 }
 

@@ -35,7 +35,7 @@ const styles = {
     color:'#ffff',
     backgroundColor:'transparent',
     boxShadow: '0 0 0 0 rgba(239, 237, 237,0)',
-    transition:"box-shadow 0.8s ease,background-color 0.1s ease,color 0.2s ease",
+    transition:"box-shadow 0.8s ease,background-color 0.8s ease,color 0.2s ease",
     '&:hover':{
         color:'#000',
         boxShadow: '0 0 4px 5px rgba(239, 237, 237,0.2)',
@@ -45,13 +45,13 @@ const styles = {
   bg_share_action:{
     color:'#ffff',
     backgroundColor:'transparent',
-    transition:'ease',
+    transition:'background-color 0.8s ease',
     '&:hover':{
       msAnimation:' pulse_share 4s cubic-bezier(0.05,0.1,0.25,1)',
       mozAnimation:' pulse_share 4s cubic-bezier(0.05,0.1,0.25,1)',
       webkitAnimation:' pulse_share 4s cubic-bezier(0.05,0.1,0.25,1)',
       animation:' pulse_share 4s infinite cubic-bezier(0.05,0.1,0.25,1)',
-      backgroundColor:'rgba(255, 121, 97, 0.85)',
+      backgroundColor:'rgba(186, 0, 13, 0.78)',
     }
 
   },

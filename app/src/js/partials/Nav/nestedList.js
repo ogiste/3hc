@@ -75,24 +75,25 @@ class NestedList extends React.Component {
         </ListItem>
         <Collapse component="li" in={this.state.open} timeout="auto" unmountOnExit>
           <List disablePadding>
-            <ListItem  button className={classes.nested}>
+            <ListItem component={Link}
+            to="/releases" button className={classes.nested}>
               <ListItemIcon>
                 <AudioTrackIcon />
               </ListItemIcon>
-              <ListItemText inset primary="New Releases" />
+              <ListItemText inset primary="Music Releases" />
             </ListItem>
             <ListItem button className={classes.nested}>
               <ListItemIcon>
                 <FileDownloadIcon />
               </ListItemIcon>
               <ListItemText inset primary="Downloads" />
-            </ListItem>
+            </ListItem>{/*
             <ListItem button className={classes.nested}>
               <ListItemIcon>
                 <PlayCircleFilledIcon />
               </ListItemIcon>
               <ListItemText inset primary="Stream" />
-            </ListItem>
+            </ListItem>*/}
           </List>
         </Collapse>
       </List>

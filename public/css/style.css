@@ -74,9 +74,12 @@ a.active {
 	padding-top: 165px;
 	min-height: 250px !important;
 }
-.homeBannerMain{
+.homeBannerMain,{
 	margin-bottom: 20px !important;
 	min-height: 250px !important;
+}
+.musicReleasesMain{
+	margin-bottom: 20px;
 }
 
 .homeBodyCardContainer{
@@ -93,9 +96,18 @@ a.active {
 .artistTileContainer>li{
 	
 }
-.cardContentTitleCont{
+.cardContentTitleCont,.musicReleaseTitleCont{
 	width: 100% !important;
 }
+.musicReleaseTitleCont{
+	text-align: center;
+	padding-bottom: 5px;
+
+}
+.musicSingleCardCell{
+	padding:5px;
+}
+
 .artistTileImage{
 	position:relative !important;
 	max-height:100%;
@@ -170,8 +182,8 @@ a.active {
 
 
 
-@-webkit-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
-@-moz-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
-@-ms-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
-@keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(255, 121, 97,0.25);}}
+@-webkit-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(186, 0, 13,0.25);}}
+@-moz-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(186, 0, 13,0.25);}}
+@-ms-keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(186, 0, 13,0.25);}}
+@keyframes pulse_share {to {box-shadow: 0 0 4px 6px rgba(186, 0, 13,0.25);}}
 
