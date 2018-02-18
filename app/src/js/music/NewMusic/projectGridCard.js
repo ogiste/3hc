@@ -12,13 +12,14 @@ import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import MoreVertIcon from 'material-ui-icons/MoreVert';
+import ProjectTracks from './projectTrackContent';
 
 const styles = theme => ({
   card: {
-    minWidth: 400,
+    minWidth: 300,
   },
   media: {
-    height: 600,
+    height: 500,
     [theme.breakpoints.down('md')]: {
       height: 400,
     },
@@ -59,7 +60,7 @@ class RecipeReviewCard extends React.Component {
         <Card className={classes.card}>
           <CardHeader
             avatar={
-              <Avatar aria-label="Recipe" className={classes.avatar}>
+              <Avatar aria-label="Music Project" className={classes.avatar}>
                 R
               </Avatar>
             }
@@ -101,23 +102,10 @@ class RecipeReviewCard extends React.Component {
             </IconButton>
           </CardActions>
           <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph >
-                Project Tracks
-              </Typography>
-              <Typography paragraph>
-                1.Intro prod by lakesidetrip
-              </Typography>
-              <Typography paragraph>
-                2.Kinfolk prod by lakesidetrip
-              </Typography>
-              <Typography paragraph>
-                3.Please prod by Con
-              </Typography>
-              <Typography>
-                4.Uma prod by KiliHippie
-              </Typography>
-            </CardContent>
+            <div>
+              
+              <ProjectTracks/>
+            </div>
           </Collapse>
         </Card>
       </div>
